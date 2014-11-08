@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>My Knockout.js Samples App</title>
+</head>
+<body>
+    <article id="personapp">
+            <header>
+                
+                
+            </header>
+        <div class="formContainer">
+            <form>
+                *First Name: <input id="fname" name="fname" data-bind="value: fname, event: { blur: saveHandler }" /> <br/>
+
+                Last Name: <input id="lname" name="lname" data-bind="value: lname" />
+                                  
+                <button data-bind="click: saveHandler">Save</button>    
+                
+            </form>
+        </div>
+        <br/>
+        <div data-bind="text: greeting"/>
+    </article>
+    <script src="js/jquery-2.0.2.min.js"></script>   
+    <script src="js/knockout-2.2.1.js"></script>
+    <script src="js/person.js"></script>
+    <script>
+        var myPerson = new Person({
+            fname: 'Tom',
+            lname: 'Mac',
+            age: 41
+        });
+    </script>
+</body>
+</html>
